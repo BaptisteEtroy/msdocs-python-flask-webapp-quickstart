@@ -15,11 +15,6 @@ module acr './modules/acr.bicep' = {
   }
 }
 
-// Get ACR password
-resource existingAcr 'Microsoft.ContainerRegistry/registries@2023-07-01' existing = {
-  name: acrName
-}
-
 // Deploy App Service Plan
 module appServicePlan './modules/app-service-plan.bicep' = {
   name: 'appServicePlanDeploy'
@@ -34,6 +29,11 @@ module appServicePlan './modules/app-service-plan.bicep' = {
       tier: 'Basic'
     }
   }
+}
+
+// Get ACR password
+resource existingAcr 'Microsoft.ContainerRegistry/registries@2023-07-01' existing = {
+  name: acrName
 }
 
 // Deploy Web App
@@ -55,7 +55,4 @@ module webApp './modules/web-app.bicep' = {
       DOCKER_REGISTRY_SERVER_PASSWORD: existingAcr.listCredentials().passwords[0].value
     }
   }
-  dependsOn: [
-    acr
-  ]
 }

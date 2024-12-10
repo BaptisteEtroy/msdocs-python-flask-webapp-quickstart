@@ -6,7 +6,7 @@ param containerRegistryImageName string
 param containerRegistryImageVersion string
 param keyVaultName string
 param tenantId string
-param objectId string
+param clientId string
 
 // Deploy Key Vault
 module keyVault './modules/key-vault.bicep' = {
@@ -15,7 +15,7 @@ module keyVault './modules/key-vault.bicep' = {
     keyVaultName: keyVaultName
     location: location
     tenantId: tenantId
-    objectId: objectId
+    clientId: clientId
   }
 }
 

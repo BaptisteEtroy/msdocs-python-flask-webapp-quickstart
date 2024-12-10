@@ -1,7 +1,7 @@
 param keyVaultName string
 param location string
 param tenantId string
-param objectId string // This will be your service principal's object ID
+param clientId string
 
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   name: keyVaultName
@@ -15,7 +15,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     accessPolicies: [
       {
         tenantId: tenantId
-        objectId: objectId
+        objectId: reference(clientId, '2022-01-01', 'Full').principalId
         permissions: {
           secrets: [
             'get'

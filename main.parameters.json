@@ -6,13 +6,13 @@
       "value": "westeurope"
     },
     "acrName": {
-      "value": "myacrname"
+      "value": "betroy-acr"
     },
     "appServicePlanName": {
-      "value": "myappserviceplan"
+      "value": "betroy-asp"
     },
     "webAppName": {
-      "value": "mywebappname"
+      "value": "betroy-web-app"
     },
     "containerRegistryImageName": {
       "value": "myflaskapp"
@@ -21,13 +21,13 @@
       "value": "latest"
     },
     "keyVaultName": {
-      "value": "mykeyvault-name"
+      "value": "betroy-kv"
     },
     "tenantId": {
-      "value": "your-tenant-id"
+      "value": "5ca2bc70-353c-4d1f-b7d7-7f2b2259df68"
     },
-    "objectId": {
-      "value": "your-service-principal-object-id"
+    "clientId": {
+      "value": "c52bb0cc-7f22-4c28-aee8-264d1cafbb06"
     }
   }
 }

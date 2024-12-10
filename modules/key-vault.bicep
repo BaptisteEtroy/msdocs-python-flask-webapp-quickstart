@@ -15,12 +15,13 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     accessPolicies: [
       {
         tenantId: tenantId
-        objectId: reference(clientId, '2022-01-01', 'Full').principalId
+        objectId: clientId
         permissions: {
           secrets: [
             'get'
             'list'
             'set'
+            'delete'
           ]
         }
       }
@@ -28,6 +29,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     enabledForDeployment: true
     enabledForTemplateDeployment: true
     enableRbacAuthorization: false
+    enableSoftDelete: false
   }
 }
 

@@ -33,4 +33,4 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   }
 }
 
-output keyVaultUri string = keyVault.properties.vaultUri 
+output keyVaultUri string = 'https://${keyVaultName}.vault.azure.net/'

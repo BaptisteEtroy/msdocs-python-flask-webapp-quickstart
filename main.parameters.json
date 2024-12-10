@@ -6,13 +6,13 @@
       "value": "westeurope"
     },
     "acrName": {
-      "value": "betroy-acr"
+      "value": "betroy20240312acr"
     },
     "appServicePlanName": {
       "value": "betroy-asp"
     },
     "webAppName": {
-      "value": "betroy-web-app"
+      "value": "betroy-webapp"
     },
     "containerRegistryImageName": {
       "value": "myflaskapp"

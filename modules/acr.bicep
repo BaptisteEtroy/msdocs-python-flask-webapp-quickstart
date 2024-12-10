@@ -14,4 +14,4 @@ resource acr 'Microsoft.ContainerRegistry/registries@2023-07-01' = {
 }
 
 output loginServer string = acr.properties.loginServer
-output acrName string = acr.name
+output adminUsername string = acr.name

@@ -6,28 +6,19 @@
       "value": "westeurope"
     },
     "acrName": {
-      "value": "betroy20240312acr"
+      "value": "betroy-acr"
     },
     "appServicePlanName": {
       "value": "betroy-asp"
     },
     "webAppName": {
-      "value": "betroy-webapp"
+      "value": "betroy-web-app"
     },
     "containerRegistryImageName": {
       "value": "myflaskapp"
     },
     "containerRegistryImageVersion": {
       "value": "latest"
-    },
-    "keyVaultName": {
-      "value": "betroy-kv"
-    },
-    "tenantId": {
-      "value": "5ca2bc70-353c-4d1f-b7d7-7f2b2259df68"
-    },
-    "clientId": {
-      "value": "c52bb0cc-7f22-4c28-aee8-264d1cafbb06"
     }
   }
 }

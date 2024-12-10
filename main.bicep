@@ -49,10 +49,11 @@ module appServicePlan './modules/app-service-plan.bicep' = {
 resource acrPasswordSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
   name: '${keyVaultName}/acrPassword'
   properties: {
-    value: listCredentials(acr.id, acr.apiVersion).passwords[0].value
+    value: listCredentials(resourceId('Microsoft.ContainerRegistry/registries', acrName), '2023-07-01').passwords[0].value
   }
   dependsOn: [
     keyVault
+    acr
   ]
 }
 

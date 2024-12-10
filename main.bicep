@@ -47,6 +47,7 @@ module webApp './modules/web-app.bicep' = {
       WEBSITES_ENABLE_APP_SERVICE_STORAGE: 'false'
       DOCKER_REGISTRY_SERVER_URL: 'https://${acr.outputs.loginServer}'
       DOCKER_REGISTRY_SERVER_USERNAME: acr.outputs.adminUsername
+      DOCKER_REGISTRY_SERVER_PASSWORD: acr.outputs.adminPassword
     }
   }
 }
